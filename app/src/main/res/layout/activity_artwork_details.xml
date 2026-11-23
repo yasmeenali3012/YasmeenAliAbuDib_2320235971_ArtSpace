@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FDFBF7">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ArtworkDetailsActivity">
+
+        <LinearLayout
+            android:id="@+id/layout_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FBF4F1"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artwork Details"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="32dp"
+            android:lineSpacingExtra="16dp"
+            android:text="Title: \n\nArtist: \n\nYear: "
+            android:textColor="#555555"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_details_title" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_visit_website"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginHorizontal="32dp"
+            android:text="Visit Website"
+            android:textAllCaps="false"
+            app:backgroundTint="#8B5A2B"
+            app:cornerRadius="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_details" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_back"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Return to Main"
+            android:textAllCaps="false"
+            app:backgroundTint="#555555"
+            app:cornerRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_visit_website"
+            app:layout_constraintVertical_bias="0.094" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
